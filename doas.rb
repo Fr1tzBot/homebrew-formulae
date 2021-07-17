@@ -12,8 +12,12 @@ class Doas < Formula
     end
 
     def caveats; <<~EOS
-    You will need to manually set the permissions for the doas executable:
+    You will need to manually set a couple of permissions on the installed executable:
     chown root:wheel <path to doas executable>
+    chmod u+s <path to doas executable>
+    This means that the file won't be writable by brew, so you will need to revert these changes when uninstalling/updating
+    place your doas.conf file in /etc and run the above chown command in order to ensure only permitted users can edit it.
+
     EOS
   end
 end

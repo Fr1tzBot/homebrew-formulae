@@ -1,8 +1,8 @@
 class Doas < Formula
     desc "A portable fork of the OpenBSD `doas` command"
     homepage "https://github.com/Fr1tzBot/OpenDoas"
-    url "https://github.com/Duncaen/OpenDoas/releases/download/v6.8.1/opendoas-6.8.1.tar.gz"
-    sha256 "fce3f5e3fd3e1287bdc5666abf3f433980b1c08e7381343c33ae3a8697d7c20c"
+    url "https://github.com/Fr1tzBot/OpenDoas/archive/refs/tags/v6.8.1.1.tar.gz"
+    sha256 "0484d1fac69b89aac003a6e405641bb86cfe660b77670d90dd428c4dcba2a9d3"
     head "https://github.com/Fr1tzBot/OpenDoas.git"
   
   
@@ -13,7 +13,7 @@ class Doas < Formula
 
     def caveats; <<~EOS
     You will need to manually set the permissions for the doas executable:
-    chown root:wheel (homebrew prefix)/doas/6.8.1/bin/doas
+    chown root:wheel <path to doas executable>
     EOS
   end
 end

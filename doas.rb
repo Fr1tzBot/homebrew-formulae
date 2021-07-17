@@ -1,4 +1,4 @@
-class doas < Formula
+class Doas < Formula
     desc "A portable fork of the OpenBSD `doas` command"
     homepage "https://github.com/Duncaen/opendoas"
     url "https://github.com/Duncaen/OpenDoas/releases/download/v6.8.1/opendoas-6.8.1.tar.gz"

@@ -9,7 +9,7 @@ class Chntpw < Formula
     depends_on "openssl"
 
     def install
-        system "make", "OSSLPATH=#{prefix}/opt/openssl"
+        system "make", "OSSLPATH=#{HOMEBREW_PREFIX}/opt/openssl"
         bin.install "chntpw"
     end
 

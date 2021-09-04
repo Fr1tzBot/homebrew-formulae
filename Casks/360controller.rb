@@ -9,5 +9,4 @@ cask "360controller" do
   depends_on macos: ">= :el_capitan"
 
   pkg "Install360Controller.pkg", allow_untrusted: true
-  binary "#{appdir}/QDriverStation.app/Contents/MacOS/QDriverStation"
 end

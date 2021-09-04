@@ -37,10 +37,10 @@ class OpensslAT10 < Formula
     # Whilst our env points to opt_bin, by default OpenSSL resolves the symlink.
     ENV["PERL"] = Formula["perl"].opt_bin/"perl" if which("perl") == Formula["perl"].opt_bin/"perl"
 
-    arch_args = %W[darwin64-#{Hardware::CPU.arch}-cc enable-ec_nistp_64_gcc_128]
+    # arch_args = %W[darwin64-#{Hardware::CPU.arch}-cc enable-ec_nistp_64_gcc_128]
 
     ENV.deparallelize
-    system "perl", "./config", *(configure_args + arch_args)
+    system "perl", "./config", *(configure_args )# + arch_args)
     system "make"
     system "make", "test"
     system "make", "install", "MANDIR=#{man}", "MANSUFFIX=ssl"

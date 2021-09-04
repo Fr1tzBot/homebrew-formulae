@@ -40,7 +40,7 @@ class OpensslAT10 < Formula
     arch_args = %W[darwin64-#{Hardware::CPU.arch}-cc enable-ec_nistp_64_gcc_128]
 
     ENV.deparallelize
-    system "perl", "./Configure", *(configure_args + arch_args)
+    system "perl", "./config", *(configure_args + arch_args)
     system "make"
     system "make", "test"
     system "make", "install", "MANDIR=#{man}", "MANSUFFIX=ssl"

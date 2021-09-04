@@ -19,5 +19,5 @@ class Doas < Formula
     place your doas.conf file in /etc and run the above chown command in order to ensure only permitted users can edit it.
 
     EOS
-  end
+    end
 end

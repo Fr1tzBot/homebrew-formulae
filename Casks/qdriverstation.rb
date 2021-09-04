@@ -6,8 +6,6 @@ cask "qdriverstation" do
   desc "a cross-platform and open-source alternative to the FRC Driver Station"
   homepage "https://frc-utilities.github.io/"
 
-  depends_on "fr1tzbot/homebrew-cask/360controller"
-
   app "QDriverStation.app"
   binary "#{appdir}/QDriverStation.app/Contents/MacOS/QDriverStation"
 end

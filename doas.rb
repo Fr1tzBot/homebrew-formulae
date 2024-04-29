@@ -8,6 +8,7 @@ class Doas < Formula
   
     def install
         system "./configure", "--prefix=#{prefix}"
+        system "make", "clean"
         system "make", "install"
     end
 

@@ -9,7 +9,7 @@ class Doas < Formula
     def install
         system "./configure", "--prefix=#{prefix}"
         system "make", "clean"
-        system "sudo", "make", "install"
+        system "make", "install"
     end
 
     def caveats; <<~EOS
